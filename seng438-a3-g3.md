@@ -32,9 +32,12 @@ value&gt=this.lower
 value&lt=this.upper
 
 Def-Use Sets:
-[value&ltthis.lower], [value&ltthis.lower, value&gtthis.upper], [value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper]
+[value&ltthis.lower]
+[value&ltthis.lower, value&gtthis.upper]
+[value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper]
 
 Test Cases:
+
     1. containsValueShouldBeTrue
     Definitions: value
     Uses: value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper
