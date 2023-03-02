@@ -21,7 +21,7 @@ In this lab, whitebox testing was conducted on the same JFreeChart program as th
 Contains (Range Test Method):
 
 CFG:
-<img src="rangeCFG/1.png" alt="rangeCFG/1.png" width="360"/>
+<img src="media/rangeCFG.png" alt="media/rangeCFG.png" width="360"/>
 
 Def-Use Pairs:
 Definitions: value
