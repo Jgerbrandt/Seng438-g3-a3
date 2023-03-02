@@ -36,7 +36,7 @@ Uses:
 
 -value>=this.lower
 
--value<>=this.upper
+-value<=this.upper
 
 
 
@@ -82,6 +82,101 @@ Test Cases:
     DU Pair Coverage:
 
     100%: All sets of DU Pairs have been tested
+
+
+
+    calculateColumnTotal (Data Utilities Test Method):
+
+CFG:
+
+
+Def-Use Pairs:
+
+Definitions:
+    Values2D data
+    Uses:
+    -ParamChecks.nullNotPermitted(data, "data");
+    -rowCount = data.getRowCount();
+    -n = data.getValue(r, column);
+    -n = data.getValue(r2, column);
+
+
+    int column
+    Uses: 
+    -n = data.getValue(r, column);
+    -n = data.getValue(r2, column);
+
+
+    double total
+
+
+    int rowCount
+    Uses:
+    r<rowCount
+    r2 > rowCount
+
+    
+    int r
+    Uses:
+    r < rowCount
+    n = data.getValue(r, column);
+
+
+    Number n
+    Uses:
+    n != null
+    total += n.doubleValue();
+
+    int r2
+    Uses:
+    r2 > rowCount
+    n = data.getValue(r2, column);
+
+
+Def-Use Sets:
+data:
+    [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();]
+    [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();, n = data.getValue(r, column);]
+    [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();, n = data.getValue(r2, column);]
+    [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();, n = data.getValue(r, column);, n = data.getValue(r2, column);]
+    
+column:
+    []
+    [n = data.getValue(r, column);]
+    [n = data.getValue(r2, column);]
+    [n = data.getValue(r, column);, n = data.getValue(r2, column);]
+
+total:
+    []
+    [total += n.doubleValue();]
+
+rowCount:
+    [r < rowCount, r2 > rowCount]
+
+r:
+[r < rowCount]
+[r < rowCount, n = data.getValue(r, column);]
+
+n:
+[]
+[n!=null]
+[n!=null, total += n.doubleValue();]
+
+r2:
+[r2 > rowCount]
+[r2 > rowCount, n = data.getValue(r2, column);]
+
+
+Test Cases:
+
+    1. calculateColumnTotalForTwoValues
+    Definitions:
+    
+
+DU Pair Coverage:
+
+
+
 
 
 # 3 A detailed description of the testing strategy for the new unit test
