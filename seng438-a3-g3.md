@@ -30,44 +30,54 @@ Definitions:
 -value
 
 Uses:
--value&ltthis.lower
--value&gtthis.upper
--value&gt=this.lower
--value&lt=this.upper
+-value<this.lower
+
+-value>this.upper
+
+-value>=this.lower
+
+-value<>=this.upper
+
+
 
 Def-Use Sets:
-[value&ltthis.lower]
-[value&ltthis.lower, value&gtthis.upper]
-[value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper]
+
+[value<this.lower]
+
+[value<this.lower, value>this.upper]
+
+[value<this.lower, value>this.upper, value>=this.lower, value<=this.upper]
 
 Test Cases:
+
+
     1. containsValueShouldBeTrue
     Definitions: value
-    Uses: value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper
+    Uses: value<this.lower, value>this.upper, value>=this.lower, value<=this.upper
     
     2. containsValueOver
     Definitions: value
-    Uses: value&ltthis.lower, value&gtthis.upper
+    Uses: value<this.lower, value>this.upper
 
     3. containsValueUnder
     Definitions: value
-    Uses: value&ltthis.lower
+    Uses: value<this.lower
 
     4. containsValueUpperEdge
     Definitions: value
-    Uses: value &lt this.lower, value &gt this.upper, value &gt = this.lower, value &lt = this.upper
+    Uses: value < this.lower, value > this.upper, value > = this.lower, value < = this.upper
 
     5. containsValueLowerEdge
     Definitions: value
-    Uses: value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper
+    Uses: value<this.lower, value>this.upper, value>=this.lower, value<=this.upper
 
     6. containsNegValue
     Definitions: value
-    Uses: value&ltthis.lower
+    Uses: value<this.lower
 
     7. containtsOnNegRange
     Definitions: value
-    Uses: value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper
+    Uses: value<this.lower, value>this.upper, value>=this.lower, value<=this.upper
 
     DU Pair Coverage:
 
