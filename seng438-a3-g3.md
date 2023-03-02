@@ -89,6 +89,7 @@ Test Cases:
 
 CFG:
 
+<img src="media/DataUtilsDFG.png" alt="media/DataUtilsDFG.png" width="600"/>
 
 Def-Use Pairs:
 
