@@ -21,15 +21,19 @@ In this lab, whitebox testing was conducted on the same JFreeChart program as th
 Contains (Range Test Method):
 
 CFG:
+
 <img src="media/rangeCFG.png" alt="media/rangeCFG.png" width="360"/>
 
 Def-Use Pairs:
-Definitions: value
+
+Definitions: 
+-value
+
 Uses:
-value&ltthis.lower
-value&gtthis.upper
-value&gt=this.lower
-value&lt=this.upper
+-value&ltthis.lower
+-value&gtthis.upper
+-value&gt=this.lower
+-value&lt=this.upper
 
 Def-Use Sets:
 [value&ltthis.lower]
@@ -37,7 +41,6 @@ Def-Use Sets:
 [value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper]
 
 Test Cases:
-
     1. containsValueShouldBeTrue
     Definitions: value
     Uses: value&ltthis.lower, value&gtthis.upper, value&gt=this.lower, value&lt=this.upper
