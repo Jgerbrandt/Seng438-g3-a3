@@ -14,7 +14,7 @@ for each group. Please see each lab document for details.)
 
 # 1 Introduction
 
-Text…
+In this lab, whitebox testing was conducted on the same JFreeChart program as the previous assignment. With access to the source code, coverage tools, path coverage, and DU calculations were possible to better justify the quality of the tests. The focus of these tests was once again the the Range and Data Utilities objects within the program. 
 
 # 2 Manual data-flow coverage calculations for X and Y methods
 
@@ -70,7 +70,7 @@ Test Cases:
 
 # 3 A detailed description of the testing strategy for the new unit test
 
-Text…
+The new unit tests were developed with the requirements of reaching 60% condition coverage, 70% branch coverage, and 90% statement coverage. Using results from DU analysis and generation of CDFs in order to further our understanding of the functions tested, these requirements were able to be met. We strived for this coverage throughout the entirety of the object files that we tested upon. 
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
@@ -86,11 +86,21 @@ Text…
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
-Text…
+Requirements-Based Test Generation:
+
+Pros:
+
+Cons:
+
+Coverage-Based Test Generation:
+
+Pros:
+
+Cons:
 
 # 8 A discussion on how the team work/effort was divided and managed
 
-Text…
+The effort for this project was divided evenly across all 4 members of the group. Work was divided evenly, with Jesse focusing on section 3.1, Avi and Aaron focusing on section 3.2, and Ethan focusing on section 3.3. Team members that were tasked with easier parts of the assignment helped out with more challenging parts, with the entire team coming together to develop tests for section 3.3.
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
