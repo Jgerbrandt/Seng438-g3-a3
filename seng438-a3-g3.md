@@ -94,6 +94,7 @@ CFG:
 Def-Use Pairs:
 
 Definitions:
+
     Values2D data
     Uses:
     -ParamChecks.nullNotPermitted(data, "data");
@@ -135,46 +136,188 @@ Definitions:
 
 
 Def-Use Sets:
+
 data:
+
+    [ParamChecks.nullNotPermitted(data, "data")]
+
     [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();]
+
     [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();, n = data.getValue(r, column);]
+
     [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();, n = data.getValue(r2, column);]
-    [ParamChecks.nullNotPermitted(data, "data"), rowCount = data.getRowCount();, n = data.getValue(r, column);, n = data.getValue(r2, column);]
     
+
 column:
+
     []
+
     [n = data.getValue(r, column);]
+
     [n = data.getValue(r2, column);]
-    [n = data.getValue(r, column);, n = data.getValue(r2, column);]
 
 total:
+
     []
+
     [total += n.doubleValue();]
 
 rowCount:
+
+    []
+
     [r < rowCount, r2 > rowCount]
 
 r:
-[r < rowCount]
-[r < rowCount, n = data.getValue(r, column);]
+
+    []
+
+    [r < rowCount]
+
+    [r < rowCount, n = data.getValue(r, column);]
 
 n:
-[]
-[n!=null]
-[n!=null, total += n.doubleValue();]
+
+    []
+
+    [n!=null]
+
+    [n!=null, total += n.doubleValue();]
 
 r2:
-[r2 > rowCount]
-[r2 > rowCount, n = data.getValue(r2, column);]
+
+    []
+
+    [r2 > rowCount]
+
+    [r2 > rowCount, n = data.getValue(r2, column);]
 
 
 Test Cases:
 
     1. calculateColumnTotalForTwoValues
     Definitions:
+    data
+        Uses:
+        rowCount = data.getRowCount();
+        Number n = data.getValue(r, column);
+
+    column
+        Uses:
+        Number n = data.getValue(r, column);
     
+    rowCount
+        Uses:
+        r < rowCount
+        r2 > rowCount
+
+    r
+        Uses:
+        r < rowCount
+        n = data.getValue(r, column);
+
+    n
+        Uses:
+        n != null
+        total += n.doubleValue();
+
+    r2:
+        Uses:
+        r2 > rowCount
+    
+    2. calculateColumnTotalForThreeValuesAndTwoRows
+    Definitions:
+    data
+        Uses:
+        rowCount = data.getRowCount();
+        Number n = data.getValue(r, column);
+
+    column
+        Uses:
+        Number n = data.getValue(r, column);
+    
+    rowCount
+        Uses:
+        r < rowCount
+        r2 > rowCount
+
+    r
+        Uses:
+        r < rowCount
+        n = data.getValue(r, column);
+
+    n
+        Uses:
+        n != null
+        total += n.doubleValue();
+
+    r2:
+        Uses:
+        r2 > rowCount
+
+    3. tryToUseNegativeIndexForTheColumn
+    Definitions:
+    data
+        Uses:
+        rowCount = data.getRowCount();
+        Number n = data.getValue(r, column);
+
+    column
+        Uses:
+        Number n = data.getValue(r, column);
+    
+    rowCount
+        Uses:
+        r < rowCount
+        r2 > rowCount
+
+    r
+        Uses:
+        r < rowCount
+        n = data.getValue(r, column);
+
+    n
+        Uses:
+        n != null
+
+    r2:
+        Uses:
+        r2 > rowCount
+
+    4. tryToUseLargerThanPossibleIndexForTheColumn
+    Definitions:
+    data
+        Uses:
+        rowCount = data.getRowCount();
+        Number n = data.getValue(r, column);
+
+    column
+        Uses:
+        Number n = data.getValue(r, column);
+    
+    rowCount
+        Uses:
+        r < rowCount
+        r2 > rowCount
+
+    r
+        Uses:
+        r < rowCount
+        n = data.getValue(r, column);
+
+    n
+        Uses:
+        n != null
+
+    r2:
+        Uses:
+        r2 > rowCount
 
 DU Pair Coverage:
+
+    Covered Sets: 11
+    Total Sets: 20
+    Coverage: 55%
 
 
 
