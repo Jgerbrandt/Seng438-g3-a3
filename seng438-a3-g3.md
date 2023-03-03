@@ -364,6 +364,20 @@ Method Coverage for Range:
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
+The coverage tools we tried using were EclEmma and CodeCoverage. We tried EclEmma first and it had most of the functionality we needed provided we had to switch out condition coverage with method coverage. We then tried to use code coverage to see if it provided any additional functionality but it broke all the tests right off the bat so just decided to keep going with EclEmma.
+
+Pros:
+
+-Comes installed with eclipse and is simple to use
+-Provides many different coverage options to monitor.
+-Good UI to see what has been covered fully, partially, and not at all 
+
+Cons: 
+
+-Mocking does work with it so we had to just use the dependant interfaces
+-Didnt have the exact coverage options that is recommended so we had to use similar alternatives
+-It would count the abstract class declaration as a line so it would hurt the coverage of the overall file
+
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
 Requirements-Based Test Generation:
