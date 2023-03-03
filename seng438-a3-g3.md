@@ -332,12 +332,27 @@ The new unit tests were developed with the requirements of reaching 60% conditio
 Text…
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
+Branch Coverage for DataUtilities:
+<img src="media/DataUtilsBranch.png" alt="media/DataUtilsBranch.png" width=""/>
 
-Text…
+Line Coverage for DataUtilities:
+<img src="media/DataUtilsLine.png" alt="media/DataUtilsLine.png" width=""/>
+
+Method Coverage for DataUtilites:
+<img src="media/DataUtilsMethod.png" alt="media/DataUtilsMethod.png" width=""/>
+
+Branch Coverage for Range:
+<img src="media/RangeBranch.png" alt="media/RangeBranch.png" width=""/>
+
+Line Coverage for Range:
+
+<img src="media/RangeLine.png" alt="media/RangeLine.png" width=""/>
+
+Method Coverage for Range:
+
+<img src="media/RangeMethod.png" alt="media/RangeMethod.png" width=""/>
 
 # 6 Pros and Cons of coverage tools used and Metrics you report
-
-Text…
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
