@@ -346,15 +346,24 @@ Requirements-Based Test Generation:
 Pros:
     Testing of specific requirements to ensure functions work as intended.
     Privacy of code.
-    
+    No need for testers to dissect and understand source code.
 
 Cons:
+    Requirements may not fully reflect functionality
+    Testers cannot diagnose cause of problem, only that a problem exists.
+    Coverage of testing is unknown.
 
 Coverage-Based Test Generation:
 
 Pros:
+    Full coverage ensures all aspects of the function is tested.
+    Testers can examine code and propose specific solutions.
+    Different coverages can be analyzed for desired testing.
 
 Cons:
+    Testers will have to understand the source code to map pathing.
+    Privacy of code is lost.
+    Longer process than requirements-based test generation.
 
 # 8 A discussion on how the team work/effort was divided and managed
 
