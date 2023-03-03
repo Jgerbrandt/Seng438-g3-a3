@@ -73,6 +73,8 @@ public class DataUtilitiesTest {
 	 }
 
 	 
+
+	 
     //----------------------------------------------------------
     // Testing Create Number Array method
     //----------------------------------------------------------
@@ -184,12 +186,77 @@ public class DataUtilitiesTest {
 		 double[][] dblMat = new double[][] {{-12},{-2}};
 		 DataUtilities.createNumberArray2D(dblMat);
 	 }
+	 //Tests for Clone Method
+	 @Test
+	 public void cloneMethodValidData() {
+		 double[][] testVals = new double[][] {{0, 1}, {2, 3}};
+		 double[][] returnVals = DataUtilities.clone(testVals);
+		 assertArrayEquals("Clone method returned " + "when cloning", returnVals, testVals);
+	 }
+	 
+	 @Test
+	 public void cloneMethodNullInput() {
+		 double[][] testVals = new double[][] {null, {2, 3}};
+		 double[][] returnVals = DataUtilities.clone(testVals);
+		 assertArrayEquals("Clone method returned " + "when cloning", returnVals, testVals);
+	 }
+	 
+	 //Tests for calculateColumnTotal with validRows argument
+	 
+	 @Test
+	 public void mockcalculateColumnTotalForThreeValuesAndTwoRowsValidRows() {
+		 double result = DataUtilities.calculateColumnTotal(myValues, 0, TwoRowsSelector);
+	     assertEquals("the total of the values in the first "
+	     		+ " column of the 2D table should be 10.5",
+	    		 result, 10.5, .000000001d);}
+	 
+	 @Test
+	 public void mock_tryToUseNegativeIndexForTheColumnValidRows() {
+			 DataUtilities.calculateColumnTotal(myValues, -1, TwoRowsSelector);
+	 }
+	 
+	 @Test(expected = NullPointerException.class)
+	 public void mock_tryToUseLargerThanPossibleIndexForTheColumnValidRows() {
+		 DataUtilities.calculateColumnTotal(myValues, 12, TwoRowsSelector);
+	 }
+	 
+	 @Test(expected = IllegalArgumentException.class)
+	 public void mock_enterNullAs2DItemValidRows() {
+		 DataUtilities.calculateColumnTotal(nullValue, 1, TwoRowsSelector);
+	 }
+	 
+	 //Test for calculateRowTotal with Valid Cols
+	 
+	 @Test
+	 public void mock_calculateRowTotalForTwoValuesValidCols() {
+		 double result = DataUtilities.calculateRowTotal(myValues, 1, TwoRowsSelector);
+		 assertEquals("the total of the values in the second "
+		     		+ "of 3 column of the 2D table should be 9.4",
+		    		 9.4, result, .000000001d);}
+	 
+	 @Test(expected = NullPointerException.class)
+	 public void mock_tryToUseNegativeIndexForTheRowIndexValidCols() {
+	
+		 DataUtilities.calculateRowTotal(myValues, -1, TwoRowsSelector);
+	 }
+
+	 @Test(expected = NullPointerException.class)
+	 public void mock_tryToUseLargerThanPossibleIndexForTheRowValidCols() {
+		 DataUtilities.calculateColumnTotal(myValues, 12, TwoRowsSelector);
+	 }
+	 
+	
 	 
 	 
     //----------------------------------------------------------
     // Testing the Cumulative Percentages method
     //----------------------------------------------------------
 	 
+	 
+	 @Test
+	 public void testCumulativePercentagesValidData() {
+		 DataUtilities.getCumulativePercentages(keyedValues);
+	 }
 	@After
     public void tearDown() throws Exception {
     }
