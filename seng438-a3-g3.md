@@ -329,7 +329,17 @@ The new unit tests were developed with the requirements of reaching 60% conditio
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
-Text…
+**DataUtilities.java**  
+*```equalsTestFirstNull()```*  
+    The purpose of this test was to cover the ```equals()``` method in the DataUtilities class. This method was an important part of increasing our coverage as it affected branch and conditional coverage.
+
+
+**DataUtilities.java**
+*equalsTestSecondNull()*
+
+
+
+
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 
