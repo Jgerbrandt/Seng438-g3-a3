@@ -1,4 +1,4 @@
-package org.jfree.data.tests;
+package org.jfree.data;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import java.beans.Transient;
 
 import org.junit.*;
 
-public class RangeTestBetter {
+public class RangeTestNew {
     private Range exampleRange1;
     private Range exampleRange2;
     private Range exampleRange3;
@@ -361,6 +361,18 @@ public class RangeTestBetter {
     	assertEquals("No Matter", 
     			Range.combineIgnoringNaN(new Range(-1, 0),
     					new Range(Double.NaN, 0)), new Range(-1, 0));}
+    
+    @Test
+    public void rangeTwoIsNullRangeOneIsGood() {
+    	assertEquals("range1(m,n) + null = range1", 
+    			Range.combineIgnoringNaN(new Range(-1, 0),
+    					null), new Range(-1, 0));}
+    
+    @Test
+    public void getToMaxWithValuesToFinishCoverage() {
+    	assertEquals("No Matter", 
+    			Range.combineIgnoringNaN(new Range(-1, 0),
+    					new Range(-1, Double.NaN)), new Range(-1, 0));}
     
     //----------------------------------------------------------
     // Testing For the expandToInclude Method 
