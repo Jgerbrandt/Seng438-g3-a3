@@ -371,8 +371,8 @@ The effort for this project was divided evenly across all 4 members of the group
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-Text…
+The main difficulties our group encountered involved getting the environment set up for the project as well as getting used to the code coverage tool. Considering this was our first time working with any tools, it was a bit of a learning process, however by implementing pair programming we were able to help one another understand it quite quickly. We learned that code coverage can generally give you a better idea of how to visualize what parts of the program have or have not been tested yet. 
 
 # 10 Comments/feedback on the lab itself
 
-Text…
+No further comments/feedback.
