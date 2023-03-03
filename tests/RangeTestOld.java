@@ -1,10 +1,10 @@
-package org.jfree.data.tests;
+package org.jfree.data;
 
 import static org.junit.Assert.*;
 
 import org.junit.*;
 
-public class RangeTest {
+public class RangeTestOld {
     private Range exampleRange1;
     private Range exampleRange2;
     private Range exampleRange3;

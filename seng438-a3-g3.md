@@ -329,7 +329,17 @@ The new unit tests were developed with the requirements of reaching 60% conditio
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
-Text…
+**DataUtilities.java**  
+*```equalsTestFirstNull()```*  
+    The purpose of this test was to cover the ```equals()``` method in the DataUtilities class. This method was an important part of increasing our coverage as it affected branch and conditional coverage.
+
+
+**DataUtilities.java**
+*equalsTestSecondNull()*
+
+
+
+
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 Branch Coverage for DataUtilities:
@@ -359,14 +369,26 @@ Method Coverage for Range:
 Requirements-Based Test Generation:
 
 Pros:
+    Testing of specific requirements to ensure functions work as intended.
+    Privacy of code.
+    No need for testers to dissect and understand source code.
 
 Cons:
+    Requirements may not fully reflect functionality
+    Testers cannot diagnose cause of problem, only that a problem exists.
+    Coverage of testing is unknown.
 
 Coverage-Based Test Generation:
 
 Pros:
+    Full coverage ensures all aspects of the function is tested.
+    Testers can examine code and propose specific solutions.
+    Different coverages can be analyzed for desired testing.
 
 Cons:
+    Testers will have to understand the source code to map pathing.
+    Privacy of code is lost.
+    Longer process than requirements-based test generation.
 
 # 8 A discussion on how the team work/effort was divided and managed
 
@@ -374,8 +396,8 @@ The effort for this project was divided evenly across all 4 members of the group
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-Text…
+The main difficulties our group encountered involved getting the environment set up for the project as well as getting used to the code coverage tool. Considering this was our first time working with any tools, it was a bit of a learning process, however by implementing pair programming we were able to help one another understand it quite quickly. We learned that code coverage can generally give you a better idea of how to visualize what parts of the program have or have not been tested yet. 
 
 # 10 Comments/feedback on the lab itself
 
-Text…
+No further comments/feedback.
