@@ -329,6 +329,14 @@ The new unit tests were developed with the requirements of reaching 60% conditio
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
+**Range.java**  
+*```rangeTwoIsNullRangeOneIsGood()```*  
+    The test was used to increase both the branch and statement coverage of the ```combineIgnoringNaN()``` method in the Range class. The Instruction was used in order to catch a single line that was not being reached in other tests. The conditions that needed to be met were simply the first argument range was a normal and good range and the second was null. This test increased the test suite's line coverage by 0.8% and the branch coverage by 1.2%.
+
+**Range.java**  
+*```shiftRangeBy3()```*  
+    This test method was added to include the ```shift()``` method in the Range class test suite as it was not previously tested. This test was crutial in achieving our desired coverage criteria for the statement and branch coverages. As this was the first test for the shift method it alone increased our statement coverage by 8.4%, and the branch coverage by 4.9%. The Test was also important as it allowed coverage to reach the private method ```shiftWithNoZeroCrossing()``` which was otherwise unreachable.
+
 **DataUtilities.java**  
 *```equalsTestFirstNull()```*  
     The purpose of this test was to cover the ```equals()``` method in the DataUtilities class. This method was an important part of increasing our coverage as it affected branch and conditional coverage.
