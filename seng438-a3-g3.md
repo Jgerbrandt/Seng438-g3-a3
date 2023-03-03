@@ -344,6 +344,9 @@ Text…
 Requirements-Based Test Generation:
 
 Pros:
+    Testing of specific requirements to ensure functions work as intended.
+    Privacy of code.
+    
 
 Cons:
 
