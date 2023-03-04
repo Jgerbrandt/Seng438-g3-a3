@@ -327,6 +327,13 @@ DU Pair Coverage:
 
 The new unit tests were developed with the requirements of reaching 60% condition coverage, 70% branch coverage, and 90% statement coverage. Using results from DU analysis and generation of CDFs in order to further our understanding of the functions tested, these requirements were able to be met. We strived for this coverage throughout the entirety of the object files that we tested upon. 
 
+**The Following Table displays the coverage percentage differences between our previous test cases and the new ones**
+
+Classes| Old Statement Coverage| Old Branch Coverage| Old Condition Coverage| New Statement Coverage| New Branch Coverage| New Condition Coverage
+------------------|------------------|----------------|------------------|------------------|----------------|------------------
+range.java        |16.0%             |19.5%           |26.1%             |92.4%             |90.2%           |100%              
+dataUtilities.java|24.0%             |12.5%           |40.0%             |87.5%             |71.9%           |90.0%       
+
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
 **Range.java**  
