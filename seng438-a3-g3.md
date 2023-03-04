@@ -339,14 +339,16 @@ The new unit tests were developed with the requirements of reaching 60% conditio
 
 **DataUtilities.java**  
 *```equalsTestFirstNull()```*  
-    The purpose of this test was to cover the ```equals()``` method in the DataUtilities class. This method was an important part of increasing our coverage as it affected branch and conditional coverage.
+    The purpose of this test was to cover the ```equals()``` method in the DataUtilities class. This method was an important part of increasing our coverage as it affected branch and conditional coverage, which we were unable to cover in our initial black-box testing approach. Using this test case, we were able to hit one of the *if()* statements in the ```equals()``` method thus increasing our total coverage.
 
 
-**DataUtilities.java**
-*equalsTestSecondNull()*
+**DataUtilities.java**  
+*```equalsTestSecondNull()```*  
+    This test case was created to again increase our total coverage of the ```equals()``` method, considering this method had a lot of room for conditional and branch coverage. We wanted to ensure that we didn't only focus on hitting every method with our test cases, but also covered every possible step of each method. In this case, we wanted to be sure that every *if()* statement was covered in the method, and thus a test case was created for each scenario. 
 
-
-
+**DataUtilities.java**  
+*```calculateColumnTotal() -> IllegalArgumentException```*  
+    The ```calculateColumnTotal()``` method was already tested once in our previous test suite, however we felt that yet again, we were unable to capture the full functionality of it. Thus we decided to test everything down to the exceptions this time. By passing in an invalid set of arguments, we were able to improve our coverage greatly as the test cases would surely hit even the *automatic* error checking portions of the program. This was a vital step in increasing overall coverage as it allowed us to see if there were any issues with otherwise "reliable" or "obvious" error checking. 
 
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
@@ -376,14 +378,14 @@ The coverage tools we tried using were EclEmma and CodeCoverage. We tried EclEmm
 
 Pros:
 
--Comes installed with eclipse and is simple to use
--Provides many different coverage options to monitor.
+-Comes installed with eclipse and is simple to use  
+-Provides many different coverage options to monitor.  
 -Good UI to see what has been covered fully, partially, and not at all 
 
 Cons: 
 
--Mocking does work with it so we had to just use the dependant interfaces
--Didnt have the exact coverage options that is recommended so we had to use similar alternatives
+-Mocking does work with it so we had to just use the dependant interfaces  
+-Didnt have the exact coverage options that is recommended so we had to use similar alternatives  
 -It would count the abstract class declaration as a line so it would hurt the coverage of the overall file
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
